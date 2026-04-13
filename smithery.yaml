@@ -1,0 +1,10 @@
+name: mock-server-ai-mcp
+description: "MEOK AI Labs — mock-server-ai-mcp"
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/mock-server-ai-mcp
+license: MIT
+categories: [Testing, Developer Tools]
+tags: [mock-server, api-mocking, test-server, stub-server, api-simulation]
+runtime: python
+entrypoint: server.py
