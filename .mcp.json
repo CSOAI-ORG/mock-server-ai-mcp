@@ -1,20 +1,71 @@
 {
   "name": "mock-server-ai-mcp",
-  "description": "MEOK AI Labs \u2014 mock-server-ai-mcp",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/mock-server-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "mock-server-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)",
+  "version": "1.0.0",
   "tools": [
-    "run"
-  ],
-  "categories": [
-    "Testing",
-    "Developer Tools"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "create_mock_endpoint",
+      "description": "MEOK AI Labs tool.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "method": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "response_body": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "method",
+          "path"
+        ]
+      }
+    },
+    {
+      "name": "generate_mock_data",
+      "description": "MEOK AI Labs tool.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "schema": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "schema"
+        ]
+      }
+    },
+    {
+      "name": "create_openapi_mock",
+      "description": "MEOK AI Labs tool.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "spec": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "spec"
+        ]
+      }
+    },
+    {
+      "name": "list_mock_endpoints",
+      "description": "MEOK AI Labs tool.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  ]
 }

@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 """Create mock API endpoint definitions. — MEOK AI Labs."""
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import json, os, re, hashlib, math, random, string, time
 from datetime import datetime, timezone
 from typing import Optional
@@ -18,48 +23,64 @@ mcp = FastMCP("mock-server-ai", instructions="MEOK AI Labs — Create mock API e
 
 
 @mcp.tool()
-def create_mock_endpoint(method: str, path: str, response_body: str = '') -> str:
+def create_mock_endpoint(method: str, path: str, response_body: str = '', api_key: str = "") -> str:
     """MEOK AI Labs tool."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     result = {"tool": "create_mock_endpoint", "timestamp": datetime.now(timezone.utc).isoformat()}
     # Process input
     local_vars = {k: v for k, v in locals().items() if k not in ('result',)}
     result["input"] = str(local_vars)[:200]
     result["status"] = "processed"
-    return json.dumps(result, indent=2)
+    return result
 
 @mcp.tool()
-def generate_mock_data(schema: str, count: int = 5) -> str:
+def generate_mock_data(schema: str, count: int = 5, api_key: str = "") -> str:
     """MEOK AI Labs tool."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     result = {"tool": "generate_mock_data", "timestamp": datetime.now(timezone.utc).isoformat()}
     # Process input
     local_vars = {k: v for k, v in locals().items() if k not in ('result',)}
     result["input"] = str(local_vars)[:200]
     result["status"] = "processed"
-    return json.dumps(result, indent=2)
+    return result
 
 @mcp.tool()
-def create_openapi_mock(spec: str) -> str:
+def create_openapi_mock(spec: str, api_key: str = "") -> str:
     """MEOK AI Labs tool."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     result = {"tool": "create_openapi_mock", "timestamp": datetime.now(timezone.utc).isoformat()}
     # Process input
     local_vars = {k: v for k, v in locals().items() if k not in ('result',)}
     result["input"] = str(local_vars)[:200]
     result["status"] = "processed"
-    return json.dumps(result, indent=2)
+    return result
 
 @mcp.tool()
-def list_mock_endpoints() -> str:
+def list_mock_endpoints(api_key: str = "") -> str:
     """MEOK AI Labs tool."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     result = {"tool": "list_mock_endpoints", "timestamp": datetime.now(timezone.utc).isoformat()}
     # Process input
     local_vars = {k: v for k, v in locals().items() if k not in ('result',)}
     result["input"] = str(local_vars)[:200]
     result["status"] = "processed"
-    return json.dumps(result, indent=2)
+    return result
 
 
 if __name__ == "__main__":
