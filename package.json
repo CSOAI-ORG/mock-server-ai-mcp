@@ -1,1 +1,11 @@
-{"name":"mock-server-ai-mcp","version":"1.0.0","description":"MEOK AI Labs MCP","author":"MEOK AI Labs","license":"MIT","repository":{"type":"git","url":"https://github.com/CSOAI-ORG/mock-server-ai-mcp"}}
+{
+  "name": "mock-server-ai-mcp",
+  "version": "1.0.0",
+  "description": "Mock Server Ai automation via MCP. Includes create mock endpoint, generate mock data, create openapi mock. By MEOK AI Labs.",
+  "author": "MEOK AI Labs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CSOAI-ORG/mock-server-ai-mcp"
+  }
+}

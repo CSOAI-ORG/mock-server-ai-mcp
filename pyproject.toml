@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 [project]
 name = "mock-server-ai-mcp"
 version = "1.0.0"
-description = "MEOK AI Labs — mock-server-ai-mcp"
+description = "Mock Server Ai automation via MCP. Includes create mock endpoint, generate mock data, create openapi mock. By MEOK AI Labs."
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
 authors = [{name = "MEOK AI Labs", email = "nicholas@meok.ai"}]

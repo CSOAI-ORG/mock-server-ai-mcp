@@ -1,6 +1,6 @@
 {
   "name": "mock-server-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs \u2014 Create mock API endpoint definitions.",
+  "description": "Mock Server Ai automation via MCP. Includes create mock endpoint, generate mock data, create openapi mock. By MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
