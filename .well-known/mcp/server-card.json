@@ -1,0 +1,54 @@
+{
+  "name": "mock-server-ai",
+  "description": "Create mock API endpoint definitions with generated test data. By MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/mock-server-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "create_endpoint",
+      "description": "Create a mock API endpoint definition. Provide response_schema as JSON object mapping field names to types (e.g. {\"name\": \"string\", \"age\": \"int\"})."
+    },
+    {
+      "name": "list_endpoints",
+      "description": "List all registered mock API endpoints."
+    },
+    {
+      "name": "generate_mock_data",
+      "description": "Generate mock data from a JSON schema. Schema maps field names to types: string, int, float, bool, date, uuid, email, array."
+    },
+    {
+      "name": "validate_schema",
+      "description": "Validate a data object against a schema definition. Reports missing fields, type mismatches, and extra fields."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Blockchain & Web3",
+    "Data & Analytics"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
