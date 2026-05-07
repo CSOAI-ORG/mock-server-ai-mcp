@@ -100,7 +100,15 @@ def create_endpoint(method: str, path: str, status_code: int = 200, response_sch
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
-    """
+    
+
+    Args:
+        method (str): The method to analyze or process.
+        path (str): The path to analyze or process.
+        status_code (int): The status code to analyze or process.
+        response_schema (str): The response schema to analyze or process.
+        description (str): The description to analyze or process.
+        api_key (str): The api key to analyze or process."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -173,6 +181,10 @@ def list_endpoints(api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -231,6 +243,12 @@ def generate_mock_data(schema: str, count: int = 5, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        schema (str): The schema to analyze or process.
+        count (int): The count to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -295,6 +313,12 @@ def validate_schema(schema_json: str, data_json: str, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        schema_json (str): The schema json to analyze or process.
+        data_json (str): The data json to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
