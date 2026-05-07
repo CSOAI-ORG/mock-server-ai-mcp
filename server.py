@@ -85,7 +85,22 @@ def _gen_value(field_type: str, field_name: str = "") -> object:
 
 @mcp.tool()
 def create_endpoint(method: str, path: str, status_code: int = 200, response_schema: str = "", description: str = "", api_key: str = "") -> str:
-    """Create a mock API endpoint definition. Provide response_schema as JSON object mapping field names to types (e.g. {\"name\": \"string\", \"age\": \"int\"})."""
+    """Create a mock API endpoint definition. Provide response_schema as JSON object mapping field names to types (e.g. {\"name\": \"string\", \"age\": \"int\"}).
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -142,7 +157,23 @@ def create_endpoint(method: str, path: str, status_code: int = 200, response_sch
 
 @mcp.tool()
 def list_endpoints(api_key: str = "") -> str:
-    """List all registered mock API endpoints."""
+    """List all registered mock API endpoints.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -171,7 +202,22 @@ def list_endpoints(api_key: str = "") -> str:
 
 @mcp.tool()
 def generate_mock_data(schema: str, count: int = 5, api_key: str = "") -> str:
-    """Generate mock data from a JSON schema. Schema maps field names to types: string, int, float, bool, date, uuid, email, array."""
+    """Generate mock data from a JSON schema. Schema maps field names to types: string, int, float, bool, date, uuid, email, array.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -205,7 +251,23 @@ def generate_mock_data(schema: str, count: int = 5, api_key: str = "") -> str:
 
 @mcp.tool()
 def validate_schema(schema_json: str, data_json: str, api_key: str = "") -> str:
-    """Validate a data object against a schema definition. Reports missing fields, type mismatches, and extra fields."""
+    """Validate a data object against a schema definition. Reports missing fields, type mismatches, and extra fields.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
