@@ -1,3 +1,5 @@
+[![mock-server-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/mock-server-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/mock-server-ai-mcp)
+
 <div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/mock-server-ai-mcp)](https://github.com/CSOAI-ORG/mock-server-ai-mcp/stargazers)
