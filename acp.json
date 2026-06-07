@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "mock-server-ai-mcp",
+    "description": "Mock Server Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "mock-server-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "create_endpoint",
+      "list_endpoints",
+      "generate_mock_data",
+      "validate_schema"
+    ]
+  }
+}

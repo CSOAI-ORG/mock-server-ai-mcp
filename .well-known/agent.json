@@ -1,0 +1,59 @@
+{
+  "name": "mock-server-ai-mcp",
+  "description": "Mock Server Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/mock-server-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "create_endpoint",
+      "name": "Create Endpoint",
+      "description": "create_endpoint via mock-server-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "list_endpoints",
+      "name": "List Endpoints",
+      "description": "list_endpoints via mock-server-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_mock_data",
+      "name": "Generate Mock Data",
+      "description": "generate_mock_data via mock-server-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "validate_schema",
+      "name": "Validate Schema",
+      "description": "validate_schema via mock-server-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
