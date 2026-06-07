@@ -1,0 +1,9 @@
+# mock-server-ai-mcp - Auto-trigger Rules
+
+When the user asks about mock server, use mock-server-ai-mcp tools: create_endpoint, list_endpoints, generate_mock_data, validate_schema
+
+**MCP server for mock server ai mcp operations**
+
+Install: `pip install mock-server-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

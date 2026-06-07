@@ -1,0 +1,25 @@
+{
+  "name": "mock-server-ai-mcp",
+  "title": "Mock Server Ai Mcp",
+  "description": "Mock Server Ai automation via MCP. Includes create mock endpoint, generate mock data, create openapi mock. By MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "create_endpoint"
+    },
+    {
+      "name": "list_endpoints"
+    },
+    {
+      "name": "generate_mock_data"
+    },
+    {
+      "name": "validate_schema"
+    }
+  ]
+}
